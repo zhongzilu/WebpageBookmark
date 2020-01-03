@@ -15,8 +15,8 @@ const array = [
 
 //删除无用代码
 array.forEach(function(it){
-    var e = document.querySelector(it);
-    if(e != 'undefined' && e != null){
+    const e = document.querySelector(it);
+    if(typeof(e) !== "undefined" && e != null){
         e.remove();
     }
 });
@@ -26,8 +26,8 @@ document.querySelector(".column-view").style.cssText = "padding: 0";
 document.querySelector(".main-area").style.width = '100%';
 
 //修改title
-var title = document.querySelector('title');
-var titleStr = title.innerText;
-var end = titleStr.indexOf(" - ");
+const title = document.querySelector('title');
+const titleStr = title.innerText;
+const end = titleStr.indexOf(" - ");
 title.innerText = titleStr.substring(0, end);
 
