@@ -14,8 +14,16 @@ var array = [
     '.tool-box',
     '.indexSuperise',
     '#kp_box_476',
-    '.reward-user-box'
+    '.reward-user-box',
+    '.more-toolbox',
+    '.person-messagebox'
 ];
+
+//模拟点击查看更多
+var readmore = document.querySelector('.btn-readmore');
+if(readmore != 'undefined' && readmore != null){
+    readmore.click();
+}
 
 //删除无用代码
 array.forEach(function(it){
@@ -27,12 +35,7 @@ array.forEach(function(it){
 
 //修改内容区域到全屏
 document.querySelector('.container main').style.cssText = 'width:100%; margin-bottom:0;';
-
-//模拟点击查看更多
-var readmore = document.querySelector('.btn-readmore');
-if(readmore != 'undefined' && readmore != null){
-    readmore.click();
-}
+document.querySelector('.d-flex').classList.remove('d-flex');
 
 //修改title
 var title = document.querySelector('title');
