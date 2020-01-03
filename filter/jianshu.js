@@ -15,8 +15,8 @@ const array = [
 
 //删除无用代码
 array.forEach(function(it){
-    var e = document.querySelector(it);
-    if(e != undefined && e != null){
+    const e = document.querySelector(it);
+    if(typeof(e) !== "undefined" && e != null){
         e.remove();
     }
 });

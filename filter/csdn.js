@@ -1,5 +1,5 @@
 //定义无用代码节点标识
-var array = [
+const array = [
     '#csdn-toolbar',
     '.container aside',
     '.csdn-side-toolbar',
@@ -20,15 +20,15 @@ var array = [
 ];
 
 //模拟点击查看更多
-var readmore = document.querySelector('.btn-readmore');
-if(readmore != 'undefined' && readmore != null){
+const readmore = document.querySelector('.btn-readmore');
+if(typeof(readmore) !== "undefined" && readmore != null){
     readmore.click();
 }
 
 //删除无用代码
 array.forEach(function(it){
-    var e = document.querySelector(it);
-    if(e != 'undefined' && e != null){
+    const e = document.querySelector(it);
+    if(typeof(e) !== "undefined" && e != null){
         e.remove();
     }
 });
@@ -38,7 +38,7 @@ document.querySelector('.container main').style.cssText = 'width:100%; margin-bo
 document.querySelector('.d-flex').classList.remove('d-flex');
 
 //修改title
-var title = document.querySelector('title');
-var titleStr = title.innerText;
-var end = titleStr.indexOf(" - ");
+const title = document.querySelector('title');
+const titleStr = title.innerText;
+const end = titleStr.indexOf(" - ");
 title.innerText = titleStr.substring(0, end);

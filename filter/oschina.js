@@ -28,7 +28,7 @@ document.querySelector("#mainScreen").style.cssText = "padding-top: 0";
 document.querySelector(".ui.grid").style.cssText = 'margin-left:0;margin-right:0;';
 
 //修改title
-var title = document.querySelector('title');
-var titleStr = title.innerText;
-var end = titleStr.indexOf(" - ");
+const title = document.querySelector('title');
+const titleStr = title.innerText;
+const end = titleStr.indexOf(" - ");
 title.innerText = titleStr.substring(0, end);
