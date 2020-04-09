@@ -40,5 +40,10 @@ document.querySelector('.d-flex').classList.remove('d-flex');
 //修改title
 const title = document.querySelector('title');
 const titleStr = title.innerText;
-const end = titleStr.indexOf(" - ");
-title.innerText = titleStr.substring(0, end);
+var end = titleStr.lastIndexOf(" - ");
+if (end < 0) {
+    end = titleStr.indexOf("_");
+}
+if (end > 0) {
+    title.innerText = titleStr.substring(0, end);
+}
